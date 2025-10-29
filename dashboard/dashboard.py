@@ -38,7 +38,7 @@ def create_user_total_df(df):
     return user_total
 
 
-all_df = pd.read_csv("./main_data.csv")
+all_df = pd.read_csv("./dashboard/main_data.csv")
 
 datetime_column = "date"
 all_df.sort_values(by="date", inplace=True)
@@ -52,7 +52,7 @@ st.set_page_config(page_title="Bike Sharing Dashboard")
 
 with st.sidebar:
     # logo
-    st.image("./logo.jpg")
+    st.image("./dashboard/logo.jpg")
 
     st.markdown("<br><br>", unsafe_allow_html=True)
 
