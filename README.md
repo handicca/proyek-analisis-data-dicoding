@@ -42,5 +42,5 @@ pip install -r requirements.txt
 streamlit run dashboard/dashboard.py
 ```
 
-![Dashboard](https://handika-bike-sharing.streamlit.app/)
+[Dashboard](https://handika-bike-sharing.streamlit.app/)
 
