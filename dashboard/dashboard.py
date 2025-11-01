@@ -57,12 +57,18 @@ with st.sidebar:
     st.markdown("<br><br>", unsafe_allow_html=True)
 
     # Mengambil start_date & end_date dari date_input
-    start_date, end_date = st.date_input(
+    date_range = st.date_input(
         label="Rentang Waktu",
         min_value=min_date,
         max_value=max_date,
         value=[min_date, max_date],
     )
+
+    try:
+        start_date, end_date = date_range
+    except ValueError:
+        st.error("Please select a valid date range.")
+        st.stop()
 
 
 main_df = all_df[
